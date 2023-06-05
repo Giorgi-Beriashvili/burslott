@@ -1,0 +1,44 @@
+<h1>Game Table</h1>
+
+<div>
+    <form class="table" [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div *ngFor="let player of players">
+            <div class="mb-3">
+                <div class="score-label">
+                    <label class="form-label">{{ player.playerName }}</label>
+                    <label class="form-label">{{ player.score }}</label>
+                </div>
+            </div>
+
+            <div formArrayName="myArray">
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <br />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <br />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <br />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+                <input type="text" class="form-control" />
+            </div>
+        </div>
+
+        <div>
+            <button type="submit" class="btn btn-primary">Finish</button>
+        </div>
+    </form>
+</div>
